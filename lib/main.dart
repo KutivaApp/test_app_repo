@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_pp/ui/home.dart';
+import 'package:test_pp/ui/nova.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      initialRoute: "/home",
+      routes: {'/second': (context) => NovaPage()},
       home: HomePage(),
     );
   }

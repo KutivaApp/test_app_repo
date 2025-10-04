@@ -56,6 +56,12 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/second');
+                },
+                icon: Icon(Icons.arrow_circle_right),
+              ),
             ],
           ),
         ),
