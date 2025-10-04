@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:test_pp/ui/home.dart';
 
-void main() => runApp(CarouselDemo());
+void main() {
+  runApp(const MyApp());
+}
 
-final themeMode = ValueNotifier(2);
-
-class CarouselDemo extends StatelessWidget {
-  const CarouselDemo({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      darkTheme: ThemeData.dark(),
+      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: HomePge(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: HomePage(),
     );
   }
 }
